@@ -95,3 +95,33 @@ Colors: Black/White base + subtle frosty blue/gray.
 Design: Minimal, premium, urban — every element has breathing room.
 
 Would you like me to mock up 3 ready-to-use color palettes (with hex codes) that match different vibes (luxury, streetwear, or eco-modern) so you can choose the exact mood for Frost?
+
+backend/
+ ├── src/
+ │    ├── config/        # DB connection, env setup
+ │    ├── models/        # Prisma schema lives here (but Prisma auto handles)
+ │    ├── middleware/    # Auth middleware (JWT verify etc.)
+ │    ├── routes/        # Express routes (auth, products, orders)
+ │    ├── controllers/   # Route logic
+ │    ├── services/      # Business logic (AI, payments, etc.)
+ │    ├── utils/         # Helpers (hash password, generate token)
+ │    └── index.js       # App entry
+ ├── prisma/
+ │    └── schema.prisma  # DB models
+ ├── .env
+ ├── package.json
+
+frontend/
+ ├── app/
+ │    ├── layout.tsx        # Root layout
+ │    ├── page.tsx          # Homepage
+ │    ├── products/         # Product listing + detail
+ │    ├── auth/             # Login/Register
+ │    ├── cart/             # Cart + Checkout
+ │    └── dashboard/        # Admin dashboard
+ ├── components/            # Reusable UI (Navbar, Footer, Buttons)
+ ├── lib/                   # API calls, helpers
+ ├── styles/                # Global styles (Tailwind handled here)
+ ├── public/                # Static assets (logo, images)
+ ├── tailwind.config.js
+ └── package.json
